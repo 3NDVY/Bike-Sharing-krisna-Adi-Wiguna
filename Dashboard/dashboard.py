@@ -15,7 +15,7 @@ from pathlib import Path
 
 sns.set(style='dark')
 
-st.subheader("Data")
+st.subheader("Data Bike Sharing :fire:")
 def by_season_df(df):
     byseason_df = df.groupby(by="weathersit").instant.nunique().reset_index()
     byseason_df.rename(columns={"instant": "sum"}, inplace=True)
