@@ -17,7 +17,7 @@ sns.set(style='dark')
 
 st.subheader("Data")
 def by_season_df(df):
-    byseason_df = df.groupby(by="weather").instant.nunique().reset_index()
+    byseason_df = df.groupby(by="weathersit").instant.nunique().reset_index()
     byseason_df.rename(columns={"instant": "sum"}, inplace=True)
     byseason_df
 
@@ -70,7 +70,7 @@ st.header("Bike Sharing Dashboard :bike:")
 st.subheader("Bike Sharing berdasarkan musim")
 fig, ax = plt.subplots(figsize=(16, 8))
 sns.barplot(
-    x="weather",
+    x="weathersit",
     y="sum",
     data=byseason_df.sort_values(by="sum", ascending=False)
 )
