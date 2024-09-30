@@ -36,7 +36,7 @@ def sidebar(df):
     max_date = df["dteday"].max()
     with st.sidebar:
         # Menambahkan logo perusahaan
-        st.image("https://w7.pngwing.com/pngs/837/372/png-transparent-bicycle-cycling-mountain-bike-bicycle.png")
+        st.image("https://th.bing.com/th/id/OIP.VARWOmMVOINqLTlIc1AGZgHaFM?rs=1&pid=ImgDetMain")
 
         def on_change():
             st.session_state.date = date
@@ -90,7 +90,8 @@ ax.set_ylabel("Jumlah Pengguna")
 ax.set_xlabel("Temperatur")
 st.pyplot(fig)
 
-st.subheader("berdasarkan feeling Temperatur")
+# Feeling Temperatur
+st.subheader("Berdasarkan feeling Temperatur")
 fig, ax = plt.subplots(figsize=(16, 8))
 sns.regplot(x=day_df["atemp"], y=day_df["cnt"])
 ax.set_title("Pengaruh Feelings Temperatur terhadap penggunaan Sepeda", loc="center", fontsize=15)
@@ -115,4 +116,4 @@ ax.tick_params(axis='x', labelsize=15)
 st.pyplot(fig)
 
 
-st.caption('Krisna Adi Wiguna')
+st.caption('Copyright (C) 2024, Krisna Adi Wiguna')
