@@ -23,6 +23,6 @@ This repository showcases the final project from the "Learning Data Analysis wit
 1. Masuk ke direktori proyek (Local):
 
     ```shell
-    cd bike-sharing/dashboard/
+    cd bike-sharing-krisna-Adi-Wiguna/dashboard/
     streamlit run dashboard.py
     ```
