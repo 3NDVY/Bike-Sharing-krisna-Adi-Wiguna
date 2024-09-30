@@ -1,5 +1,8 @@
 # Proyek Analisis Data : Bike Sharing
-Berisi analisis data (Bike Sharing) yang dideploy di Streamlit
+This repository showcases the final project from the "Learning Data Analysis with Python" course on the Dicoding platform. It focuses on analyzing bike-sharing datasets and developing interactive dashboards to effectively present the results of the data analysis. The project encompasses various data analysis methods and visualization techniques. You can access the dashboard through the provided link.
+
+[https://share.streamlit.io/-/auth/app?redirect_uri=https%3A%2F%2Fe4gbass9znjbtbz8qj586i.streamlit.app%2F](https://bike-sharing-krisna-adi-wiguna-yhejj9z3c56zsfqm6afqtk.streamlit.app/)
+
 
 ## Instalasi
 
@@ -14,4 +17,12 @@ Berisi analisis data (Bike Sharing) yang dideploy di Streamlit
     ```shell
     pip install streamlit
     pip install -r requirements.txt
+    ```
+
+## Penggunaan
+1. Masuk ke direktori proyek (Local):
+
+    ```shell
+    cd bike-sharing/dashboard/
+    streamlit run dashboard.py
     ```
