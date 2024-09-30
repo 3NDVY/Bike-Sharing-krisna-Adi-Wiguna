@@ -64,6 +64,7 @@ else:
 by_season_df = by_season_df(main_df)
 by_working_df = by_working_df(main_df)
 
+st.sidebar.markdown("---")
 st.header("Bike Sharing Dashboard :bike:")
 
 # Pengaruh cuaca terhadap penggunaan sepeda
