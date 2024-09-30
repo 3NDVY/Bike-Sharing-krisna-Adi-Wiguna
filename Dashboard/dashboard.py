@@ -104,7 +104,7 @@ fig, ax = plt.subplots(figsize=(16, 8))
 sns.barplot(
     x="workingday",
     y="sum",
-    data= by_workingday_df.sort_values(by="workingday", ascending=False),
+    data= by_working_df.sort_values(by="workingday", ascending=False),
     ax=ax
 )
 ax.set_title("Penggunaan Sepeda saat hari kerja dan hari libur", loc="center", fontsize=15)
