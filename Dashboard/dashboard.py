@@ -64,11 +64,11 @@ else:
 by_season_df = by_season_df(main_df)
 by_working_df = by_working_df(main_df)
 
-st.markdown("---")
+st.subheader("______________________________")
 st.header("Bike Sharing Dashboard :bike:")
 
 # Pengaruh cuaca terhadap penggunaan sepeda
-st.subheader("Bike Sharing berdasarkan musim")
+st.subheader("Berdasarkan musim/cuaca")
 fig, ax = plt.subplots(figsize=(16, 8))
 sns.barplot(
     x="weathersit",
@@ -101,7 +101,7 @@ ax.set_xlabel("Feels Temperatur")
 st.pyplot(fig)
 
 # pengguna sepeda berdasarkan hari kerja dan hari libur
-st.subheader("Penggunaan Sepeda berdasarkan hari kerja dan hari libur")
+st.subheader("Berdasarkan hari kerja dan hari libur")
 fig, ax = plt.subplots(figsize=(16, 8))
 sns.barplot(
     x="workingday",
