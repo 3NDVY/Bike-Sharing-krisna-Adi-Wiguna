@@ -21,14 +21,14 @@ def by_season_df(df):
     byseason_df.rename(columns={"instant": "sum"}, inplace=True)
     byseason_df
 
-    return by_season_df
+    return byseason_df
 
 def by_working_df(df):
     byworkingday_df = day_df.groupby(by="workingday").instant.nunique().reset_index()
     byworkingday_df.rename(columns={"instant": "sum"}, inplace=True)
     byworkingday_df
 
-    return by_workingday_df
+    return byworkingday_df
 
 def sidebar(df):
     df["dteday"] = pd.to_datetime(df["dteday"])
