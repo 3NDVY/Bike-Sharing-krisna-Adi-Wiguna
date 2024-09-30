@@ -72,6 +72,7 @@ fig, ax = plt.subplots(figsize=(16, 8))
 sns.barplot(
     x="weathersit",
     y="sum",
+    palatte="Set2"
     data=by_season_df.sort_values(by="sum", ascending=False)
 )
 ax.set_title("Pengaruh cuaca terhadap Penggunaan Sepeda", loc="center", fontsize=15)
@@ -105,6 +106,7 @@ fig, ax = plt.subplots(figsize=(16, 8))
 sns.barplot(
     x="workingday",
     y="sum",
+    palatte="Set2"
     data= by_working_df.sort_values(by="workingday", ascending=False),
     ax=ax
 )
