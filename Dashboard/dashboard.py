@@ -21,14 +21,14 @@ def by_season_df(df):
     byseason_df.rename(columns={"instant": "sum"}, inplace=True)
     byseason_df
 
-    return byseason_df
+    return by_season_df
 
 def by_working_df(df):
     byworkingday_df = day_df.groupby(by="workingday").instant.nunique().reset_index()
     byworkingday_df.rename(columns={"instant": "sum"}, inplace=True)
     byworkingday_df
 
-    return byworkingday_df
+    return by_workingday_df
 
 def sidebar(df):
     df["dteday"] = pd.to_datetime(df["dteday"])
@@ -72,7 +72,7 @@ fig, ax = plt.subplots(figsize=(16, 8))
 sns.barplot(
     x="weathersit",
     y="sum",
-    data=byseason_df.sort_values(by="sum", ascending=False)
+    data=by_season_df.sort_values(by="sum", ascending=False)
 )
 ax.set_title("Pengaruh cuaca terhadap Penggunaan Sepeda", loc="center", fontsize=15)
 ax.set_ylabel("jumlah Pengguna")
@@ -104,7 +104,7 @@ fig, ax = plt.subplots(figsize=(16, 8))
 sns.barplot(
     x="workingday",
     y="sum",
-    data= byworkingday_df.sort_values(by="workingday", ascending=False),
+    data= by_workingday_df.sort_values(by="workingday", ascending=False),
     ax=ax
 )
 ax.set_title("Penggunaan Sepeda saat hari kerja dan hari libur", loc="center", fontsize=15)
